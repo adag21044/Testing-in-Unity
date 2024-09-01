@@ -1,17 +1,19 @@
-
 using UnityEngine;
 
 public class CubeManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int health = 100;
+    public int score = 0;
+
+    public void TakeDamage(int amount)
     {
-        
+        health -= amount;
+        if (health < 0) health = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddScore(int amount)
     {
-        
+        score += amount;
     }
+    
 }
